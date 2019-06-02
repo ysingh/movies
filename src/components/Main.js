@@ -5,9 +5,20 @@ import { movieInfo } from '../services/movies'
 
 const StyledMain = styled.main`
 display: grid;
-grid-template-columns: repeat(9, 1fr);
 column-gap: 10px;
 row-gap: 13px;
+@media (min-width: 1025px) {
+  grid-template-columns: repeat(9, 1fr);
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  grid-template-columns: repeat(6, 1fr);
+}
+@media (max-width: 425px) and (min-width: 375px) {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 375px) {
+  grid-template-columns: 1fr;
+}
 `
 
 class Main extends React.Component {

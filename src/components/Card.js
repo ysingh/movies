@@ -21,7 +21,6 @@ margin: 0;
 
 class Card extends React.Component {
   render () {
-    console.log(this.props.movie)
     return (
       <StyledCard poster={`https://image.tmdb.org/t/p/w500${this.props.movie.poster_path}`} />
     )
